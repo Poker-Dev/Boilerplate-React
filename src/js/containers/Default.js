@@ -13,7 +13,7 @@ class Calculator extends Component {
 			<div>
 				<img src={logo} />
 				<h5 className="center-align">Official Site Coming Soon!</h5>
-				<h5 className="center-align">Our FB Group:<a href="https://www.facebook.com/epoker88"></a></h5>
+				<h5 className="center-align">Our FB Group:<a href="https://www.facebook.com/epoker88">https://www.facebook.com/epoker88</a></h5>
 			</div>
 		);
 	}
