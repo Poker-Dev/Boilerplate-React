@@ -5,7 +5,11 @@
   "scripts": {
     "prebuild": "rimraf docs",
     "postbuild": "copyfiles index.html CNAME docs",
+    "postbuild_lang": "copyfiles id/index.html en/index.html docs",
+    "postbuild_resource_en": "copyfiles docs/*.jpg docs/*.js -f docs/en",
+    "postbuild_resource_id": "copyfiles docs/*.jpg docs/*.js -f docs/id",
     "build": "npm run prebuild&&cross-env NODE_ENV=production webpack -p --config ./webpack/webpack.config.prod.js&&npm run postbuild",
+    "build_lang":"npm run postbuild_resource_en&&npm run postbuild_resource_id&&npm run postbuild_lang",
     "start": "webpack-dev-server --hot --history-api-fallback --port 3000 --config ./webpack/webpack.config.dev.js --open"
   },
   "repository": {
