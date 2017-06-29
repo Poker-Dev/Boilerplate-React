@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import IdWebApp from './containers/IdWebApp';
 
 let domElement = document.getElementById('app_id');
-console.log(domElement);
+
 if(domElement!==null){
 	const render = Component => {
 		ReactDOM.render(

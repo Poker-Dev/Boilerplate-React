@@ -5,6 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import EnWebApp from './containers/EnWebApp';
 
 let domElement = document.getElementById('app_en');
+
 if(domElement!==null){
 	const render = Component => {
 		ReactDOM.render(
