@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Calculator from './containers/Calculator';
+// import Calculator from './containers/Calculator';
+import Default from './containers/Default';
 
 const render = Component => {
 	ReactDOM.render(
@@ -10,10 +11,10 @@ const render = Component => {
   </AppContainer>, document.getElementById('app'));
 };
 
-render(Calculator);
+render(Default);
 
 if (module.hot) {
-	module.hot.accept('./containers/Calculator', () => {
-		render(Calculator);
+	module.hot.accept('./containers/Default', () => {
+		render(Default);
 	});
 }
