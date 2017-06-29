@@ -4,17 +4,21 @@ import { AppContainer } from 'react-hot-loader';
 // import Calculator from './containers/Calculator';
 import IdWebApp from './containers/IdWebApp';
 
-const render = Component => {
-	ReactDOM.render(
-    <AppContainer>
-    <Component/>
-  </AppContainer>, document.getElementById('app_id'));
-};
+let domElement = document.getElementById('app_id');
+console.log(domElement);
+if(domElement!==null){
+	const render = Component => {
+		ReactDOM.render(
+		<AppContainer>
+		<Component/>
+	</AppContainer>, domElement);
+	};
 
-render(IdWebApp);
+	render(IdWebApp);
 
-if (module.hot) {
-	module.hot.accept('./containers/IdWebApp', () => {
-		render(IdWebApp);
-	});
+	if (module.hot) {
+		module.hot.accept('./containers/IdWebApp', () => {
+			render(IdWebApp);
+		});
+	}
 }
