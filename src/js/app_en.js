@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 // import Calculator from './containers/Calculator';
-import Default from './containers/Default';
+import EnWebApp from './containers/EnWebApp';
 
 const render = Component => {
 	ReactDOM.render(
@@ -11,10 +11,10 @@ const render = Component => {
   </AppContainer>, document.getElementById('app'));
 };
 
-render(Default);
+render(EnWebApp);
 
 if (module.hot) {
-	module.hot.accept('./containers/Default', () => {
-		render(Default);
+	module.hot.accept('./containers/EnWebApp', () => {
+		render(EnWebApp);
 	});
 }

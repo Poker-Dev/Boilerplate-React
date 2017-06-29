@@ -4,7 +4,7 @@
   "description": "Boilerplate for Static Site with React",
   "scripts": {
     "prebuild": "rimraf docs",
-    "postbuild": "copyfiles index.html CNAME docs",
+    "postbuild": "copyfiles index.html favicon.ico CNAME docs",
     "postbuild_lang": "copyfiles id/index.html en/index.html docs",
     "postbuild_resource_en": "copyfiles docs/*.jpg docs/*.js -f docs/en",
     "postbuild_resource_id": "copyfiles docs/*.jpg docs/*.js -f docs/id",

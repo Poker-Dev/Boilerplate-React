@@ -9,7 +9,7 @@ module.exports = {
 		'bundle': [
 			'babel-polyfill',
 			'react-hot-loader/patch',
-			`${sourcePath}/js/app.js`,
+			`${sourcePath}/js/app_en.js`,
 			`${sourcePath}/css/style.css`
 		]
 	},

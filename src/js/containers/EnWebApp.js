@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import logo from '../../images/logo.jpg'
+import logo from '../../images/logo_en.jpg'
 
-class Calculator extends Component {
+class EnWebApp extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -74,4 +74,4 @@ class Calculator extends Component {
 	}
 };
 
-export default Calculator;
+export default EnWebApp;
