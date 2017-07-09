@@ -1,0 +1,27 @@
+.header {
+    color: #00995d;
+}
+i {
+    color: white;
+}
+#footer-section i,#feature-section i,#steps-section i,#slogan-section i {
+    color: #00995d;
+}
+.header-wrapper .tagline {
+    /*color: white !important;*/
+}
+nav.navbar.solid {
+    /*background-color: #00995d !important;*/
+    background-image: url("../images/cover-background.png");
+}
+.header-wrapper .valign-wrapper .valign::before {
+    background-image: url("../images/epoker-logo-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.slogan-logo{
+    bottom: -120px;
+    position: relative;
+}

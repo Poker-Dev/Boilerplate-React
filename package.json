@@ -3,13 +3,7 @@
   "version": "1.0.0",
   "description": "Boilerplate for Static Site with React",
   "scripts": {
-    "prebuild": "rimraf docs",
-    "postbuild": "copyfiles index.html favicon.ico CNAME docs",
-    "postbuild_lang": "copyfiles id/index.html en/index.html docs",
-    "postbuild_resource_en": "copyfiles docs/*.jpg docs/*.js -f docs/en",
-    "postbuild_resource_id": "copyfiles docs/*.jpg docs/*.js -f docs/id",
-    "build": "npm run prebuild&&cross-env NODE_ENV=production webpack -p --config ./webpack/webpack.config.prod.js&&npm run postbuild",
-    "build_lang":"npm run postbuild_resource_en&&npm run postbuild_resource_id&&npm run postbuild_lang",
+    "build": "gulp&&cross-env NODE_ENV=production webpack -p --config ./webpack/webpack.config.prod.js",
     "start": "webpack-dev-server --hot --history-api-fallback --port 3000 --config ./webpack/webpack.config.dev.js --open"
   },
   "repository": {
@@ -41,10 +35,17 @@
   "dependencies": {
     "copyfiles": "^1.2.0",
     "cross-env": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "materialize-css": "^0.99.0",
     "mathjs": "^3.13.3",
     "react": "^15.6.1",
-    "react-burger-menu": "^2.1.1",
     "react-dom": "^15.6.1",
-    "rimraf": "^2.6.1"
+    "run-sequence": "^1.2.2"
   }
 }

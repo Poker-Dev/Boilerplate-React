@@ -6,8 +6,7 @@ const publicPath = path.resolve(__dirname, '../docs');
 module.exports = {
 	entry: {
 		'bundle': [
-			`${sourcePath}/js/app_en.js`,
-			`${sourcePath}/js/app_id.js`,
+			`${sourcePath}/js/app.js`,
 			`${sourcePath}/css/style.css`
 		]
 	},
@@ -32,7 +31,7 @@ module.exports = {
 			use: [{
 				loader: 'url-loader?limit=8192'
 			}],
-			exclude: /node_modules/ 
+			exclude: /node_modules/
 		}]
 	}
 };
